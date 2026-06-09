@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instituto Santiago Ramón y Cajal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="logo.jpeg" alt="Logo Instituto Cajal" class="nav-logo" />
+        <span class="nav-title">Instituto Santiago Ramón y Cajal</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">&#9776;</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#oferta">Oferta Educativa</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="logo.jpeg" alt="Escudo Instituto Cajal" class="hero-logo" />
+      <h1>Instituto Santiago Ramón y Cajal</h1>
+      <p class="hero-sub">Escuela Precursora · Nivel Secundario · Tancacha, Córdoba</p>
+      <a href="#nosotros" class="btn-primary">Conocenos</a>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <h2 class="section-title">Sobre Nosotros</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Nuestra Historia</h3>
+          <p>El Instituto Santiago Ramón y Cajal es una institución educativa de nivel secundario con una larga trayectoria en Tancacha, Córdoba. Formamos a jóvenes comprometidos con el conocimiento y los valores.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Misión</h3>
+          <p>Brindar una educación integral de calidad que prepare a los estudiantes para los desafíos del mundo contemporáneo, fomentando el pensamiento crítico y la ciudadanía responsable.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌟</div>
+          <h3>Visión</h3>
+          <p>Ser una institución de referencia regional, reconocida por la excelencia académica y la formación en valores, impulsando el desarrollo personal y comunitario de cada alumno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA EDUCATIVA -->
+  <section class="section section-alt" id="oferta">
+    <div class="container">
+      <h2 class="section-title">Oferta Educativa</h2>
+      <div class="oferta-grid">
+        <div class="oferta-item">
+          <div class="oferta-icon">🏫</div>
+          <h3>Ciclo Básico</h3>
+          <p>1°, 2° y 3° año del nivel secundario con formación general y transversal.</p>
+        </div>
+        <div class="oferta-item">
+          <div class="oferta-icon">🔬</div>
+          <h3>Ciclo Orientado</h3>
+          <p>4°, 5° y 6° año con orientación hacia la formación en ciencias y humanidades.</p>
+        </div>
+        <div class="oferta-item">
+          <div class="oferta-icon">🤝</div>
+          <h3>Actividades Extracurriculares</h3>
+          <p>Talleres, deportes, arte y actividades culturales que enriquecen la formación de nuestros alumnos.</p>
+        </div>
+        <div class="oferta-item">
+          <div class="oferta-icon">💻</div>
+          <h3>Tecnología e Innovación</h3>
+          <p>Incorporamos herramientas digitales en el aula para preparar a los estudiantes para el futuro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <div class="contacto-wrapper">
+        <div class="contacto-info">
+          <div class="contacto-item">
+            <span class="contacto-icon">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <p>Tancacha, Córdoba, Argentina</p>
+            </div>
+          </div>
+          <div class="contacto-item">
+            <span class="contacto-icon">📞</span>
+            <div>
+              <strong>Teléfono</strong>
+              <p>(0000) 000-0000</p>
+            </div>
+          </div>
+          <div class="contacto-item">
+            <span class="contacto-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p>info@cajaltancacha.edu.ar</p>
+            </div>
+          </div>
+          <div class="contacto-item">
+            <span class="contacto-icon">🕐</span>
+            <div>
+              <strong>Horario</strong>
+              <p>Lunes a Viernes: 7:00 – 13:00 hs</p>
+            </div>
+          </div>
+        </div>
+        <form class="contacto-form" onsubmit="enviarFormulario(event)">
+          <h3>Envianos un mensaje</h3>
+          <input type="text" placeholder="Tu nombre" required />
+          <input type="email" placeholder="Tu email" required />
+          <input type="text" placeholder="Asunto" />
+          <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Enviar mensaje</button>
+          <p class="form-msg" id="formMsg"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <img src="logo.jpeg" alt="Logo" class="footer-logo" />
+      <p>© 2025 Instituto Santiago Ramón y Cajal · Tancacha, Córdoba</p>
+      <p>Escuela Precursora · Nivel Secundario</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

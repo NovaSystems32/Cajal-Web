@@ -5,31 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instituto Santiago Ramón y Cajal</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>📍 Córdoba 654, Tancacha, Cba.</span>
+      <span>📞 3571-460355</span>
+      <span>✉️ institutosantiagoramonycajal@gmail.com</span>
+    </div>
+  </div>
 
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-container">
-      <div class="nav-brand">
+      <a href="#inicio" class="nav-brand">
         <img src="logo.jpeg" alt="Logo Instituto Cajal" class="nav-logo" />
         <div class="nav-brand-text">
-          <span class="nav-title">Instituto Santiago Ramón y Cajal</span>
-          <span class="nav-sub">Tancacha, Córdoba</span>
+          <span class="nav-title">Instituto Santiago</span>
+          <span class="nav-title-bold">Ramón y Cajal</span>
         </div>
-      </div>
+      </a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">&#9776;</button>
       <nav class="nav-links" id="navLinks">
         <a href="#nosotros">Nosotros</a>
-        <a href="#oferta">Oferta Educativa</a>
+        <a href="#oferta">Oferta</a>
         <a href="#equipo">Equipo</a>
         <a href="#fechas">Fechas</a>
         <a href="#novedades">Novedades</a>
-        <a href="#centro">Centro de Est.</a>
+        <a href="#centro">Centro Est.</a>
         <a href="#contacto">Contacto</a>
-        <a href="#contacto" class="nav-btn-inscripcion">Inscribite</a>
       </nav>
+      <a href="#contacto" class="nav-cta">Inscribite</a>
     </div>
   </header>
 
@@ -37,15 +46,34 @@
   <section class="hero" id="inicio">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-tag">&#127979; Escuela Precursora 2026 · 56 años formando el futuro</p>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Escuela Precursora 2026 · 56 años de trayectoria
+      </div>
       <h1 class="hero-titulo">
-        EL FUTURO DE TUS HIJOS<br>
-        <span class="hero-titulo-rojo">EMPIEZA ACÁ</span>
+        EL FUTURO<br>DE TUS HIJOS<br>
+        <span class="hero-titulo-accent">EMPIEZA ACÁ</span>
       </h1>
-      <p class="hero-sub">Educamos hoy, formamos el mañana.<br>Inscripciones abiertas 2026 · Cupos limitados.</p>
+      <p class="hero-sub">
+        Bachiller en Comunicación y Emprendedor/a.<br>
+        Inscripciones abiertas · Cupos limitados.
+      </p>
       <div class="hero-acciones">
-        <a href="#contacto" class="btn-hero-principal">INSCRIBIR AHORA</a>
-        <a href="#nosotros" class="btn-hero-secundario">Conocer más</a>
+        <a href="#contacto" class="btn-hero-cta">INSCRIBITE AHORA</a>
+        <a href="#nosotros" class="btn-hero-ghost">Conocer más &darr;</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>56</strong><span>Años de trayectoria</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>2</strong><span>Orientaciones</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>100%</strong><span>Compromiso educativo</span>
+        </div>
       </div>
     </div>
   </section>

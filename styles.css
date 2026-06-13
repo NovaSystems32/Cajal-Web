@@ -544,6 +544,64 @@ body {
 }
 .valor-linea { display: none; }
 
+/* ─── FOTO EQUIPO ─── */
+.equipo-foto-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  margin-bottom: 0;
+}
+.equipo-foto {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.equipo-nombres-overlay {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  background: var(--negro);
+}
+.equipo-nombre-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  gap: 0.35rem;
+  transition: background 0.2s;
+}
+.equipo-nombre-tag:last-child { border-right: none; }
+.equipo-nombre-tag:hover { background: rgba(255,255,255,0.05); }
+.equipo-nombre-tag.destacado { background: rgba(122,21,21,0.35); }
+.equipo-nombre-tag.destacado:hover { background: rgba(122,21,21,0.5); }
+.tag-num {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.destacado .tag-num { background: var(--dorado); color: var(--rojo-dark); }
+.equipo-nombre-tag strong {
+  display: block;
+  color: var(--blanco);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.equipo-nombre-tag span {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.68rem;
+}
+
 /* ─── EQUIPO NUEVO ─── */
 .equipo-intro {
   text-align: center;
@@ -714,6 +772,26 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 3.5rem;
+}
+.novedad-solidaria {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+.novedad-img-real {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.tag-solidario {
+  background: #e74c3c !important;
+  color: var(--blanco) !important;
+}
+
+/* responsive equipo foto */
+@media (max-width: 700px) {
+  .equipo-nombres-overlay { grid-template-columns: repeat(3, 1fr); }
+  .equipo-nombre-tag:nth-child(3) { border-right: none; }
 }
 .novedad-body { padding: 1.5rem; }
 .novedad-tag {

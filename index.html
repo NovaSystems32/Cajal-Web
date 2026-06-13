@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instituto Santiago Ramón y Cajal</title>
+  <title>Instituto Santiago Ramón y Cajal · Tancacha, Córdoba</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -15,11 +15,12 @@
       <span>📍 Córdoba 654, Tancacha, Cba.</span>
       <span>📞 3571-460355</span>
       <span>✉️ institutosantiagoramonycajal@gmail.com</span>
+      <a href="https://instagram.com/isrycajaltcha" target="_blank" class="topbar-ig">📸 @isrycajaltcha</a>
     </div>
   </div>
 
   <!-- NAVBAR -->
-  <header class="navbar">
+  <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#inicio" class="nav-brand">
         <img src="logo.jpeg" alt="Logo Instituto Cajal" class="nav-logo" />
@@ -31,11 +32,11 @@
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">&#9776;</button>
       <nav class="nav-links" id="navLinks">
         <a href="#nosotros">Nosotros</a>
-        <a href="#oferta">Oferta</a>
+        <a href="#niveles">Niveles</a>
+        <a href="#valores">Propuesta</a>
         <a href="#equipo">Equipo</a>
         <a href="#fechas">Fechas</a>
-        <a href="#novedades">Novedades</a>
-        <a href="#centro">Centro Est.</a>
+        <a href="#instagram">Noticias</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <a href="#contacto" class="nav-cta">Inscribite</a>
@@ -55,24 +56,28 @@
         <span class="hero-titulo-accent">EMPIEZA ACÁ</span>
       </h1>
       <p class="hero-sub">
-        Bachiller en Comunicación y Emprendedor/a.<br>
-        Inscripciones abiertas · Cupos limitados.
+        Inicial, Primaria y Secundaria en un solo lugar.<br>
+        Atención personalizada · Inscripciones abiertas 2026.
       </p>
       <div class="hero-acciones">
         <a href="#contacto" class="btn-hero-cta">INSCRIBITE AHORA</a>
-        <a href="#nosotros" class="btn-hero-ghost">Conocer más &darr;</a>
+        <a href="#niveles" class="btn-hero-ghost">Ver niveles ↓</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat">
-          <strong>56</strong><span>Años de trayectoria</span>
+          <strong>280</strong><span>Alumnos</span>
         </div>
         <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <strong>2</strong><span>Orientaciones</span>
+          <strong>56</strong><span>Años de historia</span>
         </div>
         <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <strong>100%</strong><span>Compromiso educativo</span>
+          <strong>3</strong><span>Niveles educativos</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <strong>100%</strong><span>Atención personalizada</span>
         </div>
       </div>
     </div>
@@ -81,51 +86,147 @@
   <!-- NOSOTROS -->
   <section class="section" id="nosotros">
     <div class="container">
-      <h2 class="section-title">Sobre Nosotros</h2>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">📚</div>
-          <h3>Nuestra Historia</h3>
-          <p>Con más de 56 años de trayectoria, el Instituto Santiago Ramón y Cajal es una institución referente en Tancacha, Córdoba. Formamos a jóvenes comprometidos con el conocimiento y los valores.</p>
+      <div class="nosotros-wrapper">
+        <div class="nosotros-texto">
+          <span class="section-label">Sobre nosotros</span>
+          <h2 class="section-title-left">Educamos hoy,<br>formamos el mañana</h2>
+          <p>Con más de 56 años de trayectoria, somos una institución referente en Tancacha y la región. Nuestra fortaleza es la <strong>atención personalizada</strong>: grupos reducidos que permiten acompañar a cada alumno en su desarrollo integral.</p>
+          <p style="margin-top:1rem">Somos <strong>Escuela Precursora 2026</strong>, distinción que avala nuestro compromiso con la innovación pedagógica y la excelencia educativa.</p>
+          <div class="nosotros-pills">
+            <span class="pill">Compromiso con la educación</span>
+            <span class="pill">Formación integral</span>
+            <span class="pill">Valores que construyen</span>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-icon">🎯</div>
-          <h3>Misión</h3>
-          <p>Brindar una educación integral de calidad que prepare a los estudiantes para los desafíos del mundo contemporáneo, fomentando el pensamiento crítico y la ciudadanía responsable.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🌟</div>
-          <h3>Visión</h3>
-          <p>Ser una institución de referencia regional, reconocida por la excelencia académica y la formación en valores, impulsando el desarrollo personal y comunitario de cada alumno.</p>
+        <div class="nosotros-cards">
+          <div class="mini-card">
+            <div class="mini-card-icon">🎯</div>
+            <h4>Misión</h4>
+            <p>Brindar educación de calidad que forme ciudadanos comprometidos, críticos y preparados para el mundo.</p>
+          </div>
+          <div class="mini-card">
+            <div class="mini-card-icon">🌟</div>
+            <h4>Visión</h4>
+            <p>Ser institución de referencia regional por nuestra excelencia académica y formación en valores.</p>
+          </div>
+          <div class="mini-card mini-card-accent">
+            <div class="mini-card-icon">❤️</div>
+            <h4>Lo que nos diferencia</h4>
+            <p>Grupos pequeños, trato cercano y seguimiento real de cada alumno. No somos un número, somos una familia.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OFERTA EDUCATIVA -->
-  <section class="section section-alt" id="oferta">
+  <!-- NIVELES -->
+  <section class="section section-alt" id="niveles">
     <div class="container">
-      <h2 class="section-title">Oferta Educativa</h2>
-      <div class="oferta-grid">
-        <div class="oferta-item">
-          <div class="oferta-icon">🏫</div>
-          <h3>Ciclo Básico</h3>
-          <p>1°, 2° y 3° año del nivel secundario con formación general y transversal.</p>
+      <span class="section-label center">Oferta educativa</span>
+      <h2 class="section-title">Nuestros Niveles</h2>
+      <div class="niveles-grid">
+        <div class="nivel-card">
+          <div class="nivel-header nivel-inicial">
+            <span class="nivel-emoji">🌱</span>
+            <h3>Nivel Inicial</h3>
+          </div>
+          <div class="nivel-body">
+            <div class="nivel-stat">
+              <strong>50</strong>
+              <span>alumnos</span>
+            </div>
+            <p>Un espacio cálido y estimulante para los primeros pasos de tus hijos. Aprendizaje a través del juego, la exploración y el afecto.</p>
+            <ul class="nivel-features">
+              <li>✓ Grupos reducidos</li>
+              <li>✓ Atención personalizada</li>
+              <li>✓ Estimulación temprana</li>
+              <li>✓ Formación en valores</li>
+            </ul>
+            <a href="#contacto" class="btn-nivel">Más información</a>
+          </div>
         </div>
-        <div class="oferta-item">
-          <div class="oferta-icon">📱</div>
-          <h3>Bachiller en Comunicación</h3>
-          <p>4°, 5° y 6° año orientados en Comunicación, con formación en medios, lenguajes y nuevas tecnologías.</p>
+
+        <div class="nivel-card nivel-card-featured">
+          <div class="nivel-featured-badge">Más elegido</div>
+          <div class="nivel-header nivel-primaria">
+            <span class="nivel-emoji">📖</span>
+            <h3>Nivel Primario</h3>
+          </div>
+          <div class="nivel-body">
+            <div class="nivel-stat">
+              <strong>110</strong>
+              <span>alumnos</span>
+            </div>
+            <p>Seis años de formación sólida que construyen las bases del conocimiento con acompañamiento cercano y continuo.</p>
+            <ul class="nivel-features">
+              <li>✓ Seguimiento individual</li>
+              <li>✓ Tecnología en el aula</li>
+              <li>✓ Actividades culturales</li>
+              <li>✓ Deporte y recreación</li>
+            </ul>
+            <a href="#contacto" class="btn-nivel btn-nivel-featured">Más información</a>
+          </div>
         </div>
-        <div class="oferta-item">
-          <div class="oferta-icon">💡</div>
-          <h3>Bachiller Emprendedor/a</h3>
-          <p>Orientación en emprendimiento con herramientas para el mundo laboral y la innovación.</p>
+
+        <div class="nivel-card">
+          <div class="nivel-header nivel-secundario">
+            <span class="nivel-emoji">🎓</span>
+            <h3>Nivel Secundario</h3>
+          </div>
+          <div class="nivel-body">
+            <div class="nivel-stat">
+              <strong>120</strong>
+              <span>alumnos</span>
+            </div>
+            <p>Bachiller orientado en Comunicación o Emprendedor/a. Formamos jóvenes listos para la universidad y el mundo laboral.</p>
+            <ul class="nivel-features">
+              <li>✓ Bachiller en Comunicación</li>
+              <li>✓ Bachiller Emprendedor/a</li>
+              <li>✓ Centro de Estudiantes</li>
+              <li>✓ Viajes educativos</li>
+            </ul>
+            <a href="#contacto" class="btn-nivel">Más información</a>
+          </div>
         </div>
-        <div class="oferta-item">
-          <div class="oferta-icon">🤝</div>
-          <h3>Actividades Extracurriculares</h3>
-          <p>Talleres, deportes, arte y actividades culturales que enriquecen la formación de nuestros alumnos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPUESTA DE VALOR -->
+  <section class="section section-dark" id="valores">
+    <div class="container">
+      <span class="section-label center light">Por qué elegirnos</span>
+      <h2 class="section-title light">Una educación que<br>marca la diferencia</h2>
+      <div class="valores-grid">
+        <div class="valor-item">
+          <div class="valor-icon">👤</div>
+          <h3>Atención personalizada</h3>
+          <p>Grupos pequeños que permiten a cada docente conocer, acompañar y potenciar a cada alumno de manera única.</p>
+        </div>
+        <div class="valor-item">
+          <div class="valor-icon">🏫</div>
+          <h3>Los 3 niveles juntos</h3>
+          <p>Inicial, Primaria y Secundaria en un mismo espacio. Tus hijos crecen en un entorno conocido, seguro y contenido.</p>
+        </div>
+        <div class="valor-item">
+          <div class="valor-icon">📱</div>
+          <h3>Formación moderna</h3>
+          <p>Tecnología, comunicación y emprendimiento como herramientas para el futuro. Preparamos para el mundo real.</p>
+        </div>
+        <div class="valor-item">
+          <div class="valor-icon">❤️</div>
+          <h3>Comunidad y pertenencia</h3>
+          <p>Una institución donde todos se conocen. Eventos, tradiciones y un fuerte sentido de identidad escolar.</p>
+        </div>
+        <div class="valor-item">
+          <div class="valor-icon">🏆</div>
+          <h3>Escuela Precursora 2026</h3>
+          <p>Reconocimiento oficial que avala nuestra innovación pedagógica y compromiso con la calidad educativa.</p>
+        </div>
+        <div class="valor-item">
+          <div class="valor-icon">🌱</div>
+          <h3>56 años de historia</h3>
+          <p>Más de medio siglo formando a las familias de Tancacha. Experiencia, confianza y trayectoria comprobada.</p>
         </div>
       </div>
     </div>
@@ -134,6 +235,7 @@
   <!-- EQUIPO INSTITUCIONAL -->
   <section class="section" id="equipo">
     <div class="container">
+      <span class="section-label center">Nuestro equipo</span>
       <h2 class="section-title">Equipo Institucional</h2>
       <div class="equipo-grid">
         <div class="equipo-card equipo-destacado">
@@ -176,20 +278,22 @@
   <!-- FECHAS IMPORTANTES -->
   <section class="section section-alt" id="fechas">
     <div class="container">
+      <span class="section-label center">Agenda</span>
       <h2 class="section-title">Fechas Importantes</h2>
       <div class="fechas-list">
         <div class="fecha-item fecha-azul">
-          <div class="fecha-badge">
+          <div class="fecha-badge-num">
             <span class="fecha-num">5</span>
             <span class="fecha-mes">JULIO</span>
           </div>
           <div class="fecha-info">
-            <h3>🎱 Bingo</h3>
+            <h3>🎱 Bingo Solidario</h3>
             <p>Gran evento solidario del Instituto. ¡Los esperamos!</p>
           </div>
+          <span class="fecha-chip">Próximo evento</span>
         </div>
         <div class="fecha-item fecha-rojo">
-          <div class="fecha-badge">
+          <div class="fecha-badge-num">
             <span class="fecha-num">2</span>
             <span class="fecha-mes">AGOSTO</span>
           </div>
@@ -199,7 +303,7 @@
           </div>
         </div>
         <div class="fecha-item fecha-azul">
-          <div class="fecha-badge">
+          <div class="fecha-badge-num">
             <span class="fecha-num">19</span>
             <span class="fecha-mes">NOVIEMBRE</span>
           </div>
@@ -215,6 +319,7 @@
   <!-- NOVEDADES -->
   <section class="section" id="novedades">
     <div class="container">
+      <span class="section-label center">Lo que hacemos</span>
       <h2 class="section-title">Novedades</h2>
       <div class="novedades-grid">
         <div class="novedad-card">
@@ -222,7 +327,7 @@
           <div class="novedad-body">
             <span class="novedad-tag">Viaje Educativo</span>
             <h3>Complejo Hidroeléctrico Río Grande</h3>
-            <p>Los alumnos de 6° año vivieron el primer viaje del ciclo desde el espacio curricular de Química, a cargo de la Profesora Florencia Pogliotto. Recorrieron la Central Hidroeléctrica Cerro Pelado, construida dentro de una caverna a más de 100 m de profundidad — la más grande de su tipo en Sudamérica.</p>
+            <p>Los alumnos de 6° año visitaron la Central Hidroeléctrica Cerro Pelado, construida a más de 100 m de profundidad — la más grande de Sudamérica.</p>
             <span class="novedad-promo">Promo 2026</span>
           </div>
         </div>
@@ -231,7 +336,7 @@
           <div class="novedad-body">
             <span class="novedad-tag">Institucional</span>
             <h3>Escuela Precursora 2026</h3>
-            <p>Nos enorgullece ser reconocidos como Escuela Precursora 2026, distinción que avala nuestra trayectoria de más de 56 años formando jóvenes de Tancacha y la región.</p>
+            <p>Nos enorgullece ser reconocidos como Escuela Precursora 2026, distinción que avala nuestra trayectoria de más de 56 años.</p>
             <span class="novedad-promo">Orgullo Cajal</span>
           </div>
         </div>
@@ -239,9 +344,49 @@
     </div>
   </section>
 
+  <!-- INSTAGRAM -->
+  <section class="section section-ig" id="instagram">
+    <div class="container">
+      <div class="ig-header">
+        <div>
+          <span class="section-label">Redes sociales</span>
+          <h2 class="section-title-left">Seguinos en Instagram</h2>
+          <p class="ig-desc">Conocé el día a día del instituto, eventos, logros y la vida escolar de nuestros alumnos.</p>
+        </div>
+        <a href="https://instagram.com/isrycajaltcha" target="_blank" class="btn-ig">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          @isrycajaltcha
+        </a>
+      </div>
+      <div class="ig-grid">
+        <a href="https://instagram.com/isrycajaltcha" target="_blank" class="ig-post">
+          <div class="ig-post-inner ig-post-1">
+            <div class="ig-post-overlay"><span>Ver en Instagram →</span></div>
+          </div>
+        </a>
+        <a href="https://instagram.com/isrycajaltcha" target="_blank" class="ig-post">
+          <div class="ig-post-inner ig-post-2">
+            <div class="ig-post-overlay"><span>Ver en Instagram →</span></div>
+          </div>
+        </a>
+        <a href="https://instagram.com/isrycajaltcha" target="_blank" class="ig-post">
+          <div class="ig-post-inner ig-post-3">
+            <div class="ig-post-overlay"><span>Ver en Instagram →</span></div>
+          </div>
+        </a>
+        <a href="https://instagram.com/isrycajaltcha" target="_blank" class="ig-post">
+          <div class="ig-post-inner ig-post-4">
+            <div class="ig-post-overlay"><span>Ver en Instagram →</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- CENTRO DE ESTUDIANTES -->
   <section class="section section-alt" id="centro">
     <div class="container">
+      <span class="section-label center">Participación estudiantil</span>
       <h2 class="section-title">Centro de Estudiantes 2026</h2>
       <div class="centro-wrapper">
         <div class="centro-autoridades">
@@ -291,7 +436,8 @@
   <!-- CONTACTO -->
   <section class="section" id="contacto">
     <div class="container">
-      <h2 class="section-title">Contacto</h2>
+      <span class="section-label center">Hablemos</span>
+      <h2 class="section-title">Inscripciones y Contacto</h2>
       <div class="contacto-wrapper">
         <div class="contacto-info">
           <div class="contacto-item">
@@ -326,17 +472,24 @@
             <span class="contacto-icon">📸</span>
             <div>
               <strong>Instagram</strong>
-              <p>@isrycajaltcha</p>
+              <p><a href="https://instagram.com/isrycajaltcha" target="_blank">@isrycajaltcha</a></p>
             </div>
           </div>
         </div>
         <form class="contacto-form" onsubmit="enviarFormulario(event)">
-          <h3>Envianos un mensaje</h3>
-          <input type="text" placeholder="Tu nombre" required />
-          <input type="email" placeholder="Tu email" required />
-          <input type="text" placeholder="Asunto" />
-          <textarea placeholder="Tu mensaje..." rows="5" required></textarea>
-          <button type="submit" class="btn-primary">Enviar mensaje</button>
+          <h3>Consultá por inscripciones</h3>
+          <div class="form-row">
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu email" required />
+          </div>
+          <select>
+            <option value="" disabled selected>Nivel de interés</option>
+            <option>Nivel Inicial</option>
+            <option>Nivel Primario</option>
+            <option>Nivel Secundario</option>
+          </select>
+          <textarea placeholder="Tu consulta o mensaje..." rows="4" required></textarea>
+          <button type="submit" class="btn-primary">Enviar consulta</button>
           <p class="form-msg" id="formMsg"></p>
         </form>
       </div>
@@ -345,10 +498,40 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <img src="logo.jpeg" alt="Logo" class="footer-logo" />
-      <p>© 2026 Instituto Santiago Ramón y Cajal · Tancacha, Córdoba</p>
-      <p>Escuela Precursora 2026 · Nivel Secundario · 56 años de trayectoria</p>
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <div class="footer-brand">
+          <img src="logo.jpeg" alt="Logo" class="footer-logo" />
+          <div>
+            <p class="footer-nombre">Instituto Santiago Ramón y Cajal</p>
+            <p class="footer-lema">Educamos hoy, formamos el mañana</p>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <strong>Niveles</strong>
+          <a href="#niveles">Nivel Inicial</a>
+          <a href="#niveles">Nivel Primario</a>
+          <a href="#niveles">Nivel Secundario</a>
+        </div>
+        <div class="footer-links-col">
+          <strong>Institución</strong>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#equipo">Equipo</a>
+          <a href="#centro">Centro de Estudiantes</a>
+          <a href="#fechas">Fechas Importantes</a>
+        </div>
+        <div class="footer-links-col">
+          <strong>Contacto</strong>
+          <a href="tel:3571460355">📞 3571-460355</a>
+          <a href="mailto:institutosantiagoramonycajal@gmail.com">✉️ Email</a>
+          <a href="https://instagram.com/isrycajaltcha" target="_blank">📸 Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Instituto Santiago Ramón y Cajal · Tancacha, Córdoba · Escuela Precursora 2026</p>
+      </div>
     </div>
   </footer>
 

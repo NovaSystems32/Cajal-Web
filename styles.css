@@ -544,63 +544,34 @@ body {
 }
 .valor-linea { display: none; }
 
-/* ─── FOTO EQUIPO ─── */
-.equipo-foto-wrapper {
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  margin-bottom: 0;
-}
-.equipo-foto {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-.equipo-nombres-overlay {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  background: var(--negro);
-}
-.equipo-nombre-tag {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem 0.5rem;
-  border-right: 1px solid rgba(255,255,255,0.07);
-  gap: 0.35rem;
-  transition: background 0.2s;
-}
-.equipo-nombre-tag:last-child { border-right: none; }
-.equipo-nombre-tag:hover { background: rgba(255,255,255,0.05); }
-.equipo-nombre-tag.destacado { background: rgba(122,21,21,0.35); }
-.equipo-nombre-tag.destacado:hover { background: rgba(122,21,21,0.5); }
-.tag-num {
-  width: 24px; height: 24px;
+/* ─── CARAS RECORTADAS DE FOTO GRUPAL ─── */
+/* Orden en la foto: 1=Leonel, 2=Sofía, 3=Melisa, 4=Raquel, 5=Juliana, 6=Lucas */
+.cara {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.5);
-  font-size: 0.7rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: url('equipo.jpeg');
+  background-size: 650% auto;
+  background-repeat: no-repeat;
   flex-shrink: 0;
+  border: 3px solid var(--gris-medio);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
-.destacado .tag-num { background: var(--dorado); color: var(--rojo-dark); }
-.equipo-nombre-tag strong {
-  display: block;
-  color: var(--blanco);
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.2;
+.cara-sm {
+  width: 48px;
+  height: 48px;
+  background-size: 650% auto;
 }
-.equipo-nombre-tag span {
-  color: rgba(255,255,255,0.45);
-  font-size: 0.68rem;
-}
+.equipo-persona.destacada .cara { border-color: var(--dorado); }
+
+/* Posición horizontal de cada persona (izq→der: 0%→100% en 5 pasos = 20% cada uno) */
+/* Y: ~30% para mostrar la cara (foto tiene header rojo arriba) */
+.cara-1 { background-position: 2%  30%; }
+.cara-2 { background-position: 22% 30%; }
+.cara-3 { background-position: 42% 30%; }
+.cara-4 { background-position: 60% 30%; }
+.cara-5 { background-position: 80% 30%; }
+.cara-6 { background-position: 99% 30%; }
 
 /* ─── EQUIPO NUEVO ─── */
 .equipo-intro {

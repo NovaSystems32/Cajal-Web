@@ -873,60 +873,135 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* ─── NOVEDADES ─── */
-.novedades-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.novedad-card {
+/* ─── NOVEDADES NUEVO ─── */
+.novedades-nuevo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Card destacada */
+.novedad-featured {
   background: var(--blanco);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.10);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
-.novedad-card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px rgba(0,0,0,0.12); }
-.novedad-img-placeholder {
-  background: linear-gradient(135deg, var(--rojo-dark), #2c3e7a);
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.5rem;
+.novedad-featured:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(0,0,0,0.14); }
+
+.novedad-featured-img {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
 }
-.novedad-solidaria {
-  background: linear-gradient(135deg, #c0392b, #e74c3c);
-}
-.novedad-img-real {
-  width: 100%;
-  height: 220px;
+.novedad-featured-img img {
+  width: 100%; height: 100%;
   object-fit: cover;
   object-position: center top;
   display: block;
+  transition: transform 0.4s;
 }
-.tag-solidario {
-  background: #e74c3c !important;
-  color: var(--blanco) !important;
-}
+.novedad-featured:hover .novedad-featured-img img { transform: scale(1.04); }
 
-/* responsive equipo foto */
-@media (max-width: 700px) {
-  .equipo-nombres-overlay { grid-template-columns: repeat(3, 1fr); }
-  .equipo-nombre-tag:nth-child(3) { border-right: none; }
-}
-.novedad-body { padding: 1.5rem; }
-.novedad-tag {
-  display: inline-block;
+.novedad-featured-tag {
+  position: absolute;
+  top: 1rem; left: 1rem;
   background: var(--dorado);
   color: var(--rojo-dark);
   font-size: 0.68rem;
   font-weight: 700;
-  padding: 0.2rem 0.7rem;
+  padding: 0.3rem 0.8rem;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 0.6rem;
 }
-.novedad-body h3 { font-size: 1rem; font-weight: 700; color: #222; margin-bottom: 0.6rem; }
-.novedad-body p { font-size: 0.87rem; color: #555; margin-bottom: 0.75rem; line-height: 1.65; }
-.novedad-promo { font-size: 0.78rem; font-weight: 600; color: var(--azul); }
+
+.novedad-featured-body { padding: 1.75rem; }
+.novedad-fecha {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--rojo);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.novedad-featured-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--negro);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.novedad-featured-body p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.novedad-dept { font-size: 0.8rem; font-weight: 600; color: var(--azul); }
+
+/* Lista de noticias */
+.novedades-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.novedad-item {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+  background: var(--blanco);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.novedad-item:hover { transform: translateX(4px); box-shadow: 0 6px 20px rgba(0,0,0,0.11); }
+
+.novedad-item-icon {
+  width: 54px; height: 54px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.novedad-item-body { flex: 1; }
+.novedad-item-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--dorado);
+  color: var(--rojo-dark);
+  padding: 0.15rem 0.6rem;
+  border-radius: 20px;
+  margin-bottom: 0.4rem;
+}
+.tag-solidario { background: #e74c3c !important; color: var(--blanco) !important; }
+
+.novedad-item-body h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.35rem;
+}
+.novedad-item-body p {
+  font-size: 0.83rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .novedades-nuevo { grid-template-columns: 1fr; }
+  .novedad-featured-img { height: 220px; }
+}
 
 /* ─── INSTAGRAM ─── */
 .section-ig { background: var(--gris-claro); }

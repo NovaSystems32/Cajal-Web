@@ -554,11 +554,14 @@ body {
   justify-content: center;
   margin: 0 auto 1.25rem;
 }
-.valor-icon { font-size: 2rem; }
-.valor-icon-rojo   { background: rgba(198,40,40,0.1); }
-.valor-icon-azul   { background: rgba(26,82,118,0.1); }
-.valor-icon-dorado { background: rgba(201,162,39,0.15); }
-.valor-icon-verde  { background: rgba(39,174,96,0.1); }
+.valor-icon { font-size: 1.6rem; }
+.valor-icon-rojo   { background: rgba(198,40,40,0.1); color: var(--rojo); }
+.valor-icon-azul   { background: rgba(26,82,118,0.1); color: var(--azul); }
+.valor-icon-dorado { background: rgba(201,162,39,0.15); color: #a07d10; }
+.valor-icon-verde  { background: rgba(39,174,96,0.1); color: #1a7a42; }
+
+.mini-card-icon i { font-size: 1.4rem; color: var(--rojo); }
+.nivel-emoji i { font-size: 2rem; color: inherit; }
 
 .valor-card h3 {
   font-size: 1rem;

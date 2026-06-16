@@ -47,6 +47,20 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// Mostrar plantel al hacer clic en Nivel Secundario
+const linkSecundario = document.getElementById('linkSecundario');
+const seccionEquipo = document.getElementById('equipo');
+if (linkSecundario && seccionEquipo) {
+  linkSecundario.addEventListener('click', (e) => {
+    e.preventDefault();
+    seccionEquipo.classList.remove('equipo-hidden');
+    seccionEquipo.classList.add('equipo-visible');
+    setTimeout(() => {
+      seccionEquipo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  });
+}
+
 // Formulario de contacto
 function enviarFormulario(e) {
   e.preventDefault();

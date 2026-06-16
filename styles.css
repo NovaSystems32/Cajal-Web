@@ -617,6 +617,10 @@ body {
 }
 .btn-cta-banner:hover { background: #e0b830; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,162,39,0.5); }
 
+/* ─── EQUIPO OCULTO POR DEFECTO ─── */
+.equipo-hidden { display: none; }
+.equipo-visible { display: block; }
+
 /* ─── PLANTEL DOCENTE (tarjetas estilo IMC) ─── */
 .plantel-grid {
   display: grid;

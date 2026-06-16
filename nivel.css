@@ -10,14 +10,14 @@
   padding-top: 104px;
   text-align: center;
 }
-.nivel-hero-inicial  { background: linear-gradient(135deg, #1b5e20, #388e3c); }
-.nivel-hero-primario { background: linear-gradient(135deg, #e65100, #f57c00); }
-.nivel-hero-secundario { background: linear-gradient(135deg, #0d47a1, #1976d2); }
+.nivel-hero-inicial  { background-color: #1b5e20; background-size: cover; background-position: center; }
+.nivel-hero-primario { background-color: #e65100; background-size: cover; background-position: center; }
+.nivel-hero-secundario { background-color: #0d47a1; background-size: cover; background-position: center; }
 
 .nivel-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.55);
 }
 .nivel-hero-content {
   position: relative;

@@ -483,66 +483,139 @@ body {
 .btn-nivel-featured { background: var(--rojo); color: var(--blanco); }
 .btn-nivel-featured:hover { background: var(--rojo-dark); }
 
-/* ─── VALORES NUEVO ─── */
-.section-valores { background: var(--blanco); }
+/* ─── MARQUEE ─── */
+.marquee-wrap {
+  background: var(--rojo-dark);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.75rem 0;
+}
+.marquee-track {
+  display: inline-block;
+  animation: marquee-scroll 28s linear infinite;
+}
+.marquee-track span {
+  display: inline-block;
+  color: rgba(255,255,255,0.88);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0 1.5rem;
+}
+.marquee-sep { color: var(--dorado) !important; font-weight: 900 !important; }
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-.valores-header {
+/* ─── VALORES CARDS ─── */
+.section-valores { background: var(--gris-claro); }
+
+.valores-cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: end;
-  margin-bottom: 3.5rem;
-}
-.valores-intro {
-  color: #666;
-  font-size: 1rem;
-  line-height: 1.75;
-  padding-bottom: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
 }
 
-.valores-nuevo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+.valor-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 2.25rem 1.75rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  text-align: center;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
+.valor-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
 
-.valor-fila {
-  display: grid;
-  grid-template-columns: 64px 1fr 1px;
-  gap: 1.5rem;
-  align-items: start;
-  padding: 2rem 2rem 2rem 0;
-  border-bottom: 1px solid var(--gris-medio);
-  transition: background 0.2s;
+.valor-icon-wrap {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
 }
-.valor-fila:hover { background: rgba(198,40,40,0.03); }
-.valores-nuevo-grid .valor-fila:nth-child(odd) { padding-right: 3rem; }
-.valores-nuevo-grid .valor-fila:nth-child(even) { padding-left: 3rem; border-left: 1px solid var(--gris-medio); }
-.valores-nuevo-grid .valor-fila:nth-last-child(-n+2) { border-bottom: none; }
+.valor-icon { font-size: 2rem; }
+.valor-icon-rojo   { background: rgba(198,40,40,0.1); }
+.valor-icon-azul   { background: rgba(26,82,118,0.1); }
+.valor-icon-dorado { background: rgba(201,162,39,0.15); }
+.valor-icon-verde  { background: rgba(39,174,96,0.1); }
 
-.valor-numero {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 900;
-  color: var(--gris-medio);
-  line-height: 1;
-  padding-top: 0.1rem;
-  transition: color 0.2s;
-}
-.valor-fila:hover .valor-numero { color: var(--rojo); }
-
-.valor-contenido h3 {
+.valor-card h3 {
   font-size: 1rem;
   font-weight: 700;
   color: var(--negro);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
-.valor-contenido p {
-  font-size: 0.87rem;
+.valor-card p {
+  font-size: 0.86rem;
   color: #666;
-  line-height: 1.65;
+  line-height: 1.7;
 }
-.valor-linea { display: none; }
+
+/* ─── CTA BANNER ─── */
+.cta-banner {
+  position: relative;
+  background: url('frente.jpeg') center 60% / cover no-repeat;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(122,21,21,0.93) 0%, rgba(10,10,10,0.85) 100%);
+}
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.cta-label {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+}
+.cta-content h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--blanco);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.cta-content p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+}
+.btn-cta-banner {
+  display: inline-block;
+  background: var(--dorado);
+  color: #3a2000;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 1.1rem 3rem;
+  border-radius: 5px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 24px rgba(201,162,39,0.4);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-cta-banner:hover { background: #e0b830; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,162,39,0.5); }
 
 /* ─── PLANTEL DOCENTE (tarjetas estilo IMC) ─── */
 .plantel-grid {
@@ -1066,6 +1139,7 @@ body {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 960px) {
+  .valores-cards-grid { grid-template-columns: repeat(2, 1fr); }
   .topbar-inner { gap: 1rem; font-size: 0.7rem; }
   .nav-toggle { display: block; }
   .nav-cta { display: none; }
@@ -1124,6 +1198,7 @@ body {
 }
 
 @media (max-width: 600px) {
+  .valores-cards-grid { grid-template-columns: 1fr; }
   .topbar { display: none; }
   .navbar { top: 0; }
   .hero { padding-top: 76px; }

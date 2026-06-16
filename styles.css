@@ -527,6 +527,85 @@ body {
   100% { transform: translateX(-50%); }
 }
 
+/* ─── NIVELES CTA CARDS ─── */
+.niveles-cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.nivel-cta-card {
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.12);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.nivel-cta-card:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(0,0,0,0.18); }
+
+.nivel-cta-foto {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.nivel-cta-body {
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nivel-cta-verde .nivel-cta-body { background: #1b5e20; }
+.nivel-cta-rojo  .nivel-cta-body { background: var(--rojo-dark); }
+.nivel-cta-azul  .nivel-cta-body { background: #0d47a1; }
+
+.nivel-cta-ico {
+  font-size: 1.6rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.25rem;
+}
+
+.nivel-cta-body h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.nivel-cta-body p {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.nivel-cta-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.5rem 1.1rem;
+  border-radius: 30px;
+  transition: background 0.2s;
+  width: fit-content;
+}
+.nivel-cta-card:hover .nivel-cta-btn { background: rgba(255,255,255,0.28); }
+
+@media (max-width: 860px) {
+  .niveles-cta-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+}
+
 /* ─── VALORES CARDS ─── */
 .section-valores { background: var(--gris-claro); }
 

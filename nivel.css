@@ -1,0 +1,203 @@
+/* ─── PÁGINAS DE NIVEL ─── */
+
+/* Hero */
+.nivel-hero {
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 104px;
+  text-align: center;
+}
+.nivel-hero-inicial  { background: linear-gradient(135deg, #1b5e20, #388e3c); }
+.nivel-hero-primario { background: linear-gradient(135deg, #e65100, #f57c00); }
+.nivel-hero-secundario { background: linear-gradient(135deg, #0d47a1, #1976d2); }
+
+.nivel-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.nivel-hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 2rem 1.5rem;
+}
+.nivel-back {
+  display: inline-block;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+.nivel-back:hover { color: #fff; }
+
+.nivel-hero-emoji { font-size: 3rem; margin-bottom: 0.75rem; }
+
+.nivel-hero-content h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+.nivel-hero-content p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 1.5rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nivel-hero-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+}
+.nivel-hero-stat strong {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+.nivel-hero-stat span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* Info section */
+.nivel-info {
+  padding: 5rem 1.5rem;
+  background: #fff;
+}
+.nivel-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.nivel-info-texto p { color: #555; font-size: 0.97rem; line-height: 1.75; }
+
+.nivel-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 1.75rem;
+}
+.nivel-feature-item {
+  background: var(--gris-claro);
+  border-left: 3px solid var(--rojo);
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.nivel-info-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.nivel-stat-card {
+  background: var(--gris-claro);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-left: 4px solid var(--rojo);
+}
+.nivel-stat-card strong {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--rojo);
+  line-height: 1;
+}
+.nivel-stat-card span {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Equipo section */
+.nivel-equipo {
+  padding: 5rem 1.5rem;
+  background: var(--gris-claro);
+}
+
+/* Grid centrado para 2 cards */
+.plantel-grid-centrado {
+  max-width: 640px;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+/* Avatares con iniciales (sin foto) */
+.plantel-avatar-wrap {
+  background: none !important;
+  border: none !important;
+}
+.plantel-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+.plantel-avatar-dir    { background: var(--dorado); color: var(--rojo-dark); }
+.plantel-avatar-azul   { background: var(--azul); }
+.plantel-avatar-verde  { background: #27ae60; }
+
+/* CTA mini */
+.nivel-cta {
+  background: var(--rojo-dark);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+.nivel-cta-content { max-width: 560px; margin: 0 auto; }
+.nivel-cta-content h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+.nivel-cta-content p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.97rem;
+  margin-bottom: 1.75rem;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .nivel-info-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .nivel-info-stats { flex-direction: row; flex-wrap: wrap; }
+  .nivel-stat-card { flex: 1; min-width: 140px; }
+}
+@media (max-width: 600px) {
+  .nivel-features-grid { grid-template-columns: 1fr; }
+  .plantel-grid-centrado { grid-template-columns: 1fr !important; max-width: 280px; }
+  .nivel-hero { padding-top: 76px; }
+}

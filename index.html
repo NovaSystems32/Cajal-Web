@@ -665,5 +665,23 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    (function() {
+      var logo = document.querySelector('.nav-logo');
+      if (!logo) return;
+      logo.style.cursor = 'pointer';
+      var clicks = 0, timer = null;
+      logo.addEventListener('click', function(e) {
+        e.preventDefault();
+        clicks++;
+        if (clicks === 1) timer = setTimeout(function() { clicks = 0; }, 2000);
+        if (clicks >= 2) {
+          clearTimeout(timer);
+          clicks = 0;
+          window.location.href = 'admin/index.html';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

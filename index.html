@@ -654,31 +654,16 @@
     <div class="footer-bottom">
       <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
         <p style="margin:0;">© 2026 Instituto Santiago Ramón y Cajal · Tancacha, Córdoba · Escuela Precursora 2026</p>
+        <a href="admin/index.html" title="Acceso Administrativo"
+          style="color:rgba(255,255,255,0.18);text-decoration:none;font-size:0.85rem;transition:color 0.2s;"
+          onmouseover="this.style.color='rgba(201,162,39,0.6)'"
+          onmouseout="this.style.color='rgba(255,255,255,0.18)'">
+          <i class="fas fa-lock"></i>
+        </a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Acceso secreto: 5 clicks en el logo en menos de 3 segundos
-    (function() {
-      var logo = document.querySelector('.nav-logo');
-      if (!logo) return;
-      var clicks = 0, timer = null;
-      logo.style.cursor = 'pointer';
-      logo.addEventListener('click', function(e) {
-        e.preventDefault();
-        clicks++;
-        if (clicks === 1) {
-          timer = setTimeout(function() { clicks = 0; }, 3000);
-        }
-        if (clicks >= 5) {
-          clearTimeout(timer);
-          clicks = 0;
-          window.location.href = 'admin/index.html';
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
